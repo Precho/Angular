@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;">
+  <img [src]="user.img" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{user.name}} {{user.surname}}</h5>
+    <p class="card-text">Index no. #{{user.indexNumber}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Address: {{user.address.city}} {{user.address.homeNumber}}</li>
+    <li class="list-group-item" *ngIf="user.address.street">Street: {{user.address.street}}</li>
+    <li class="list-group-item">Postal code: {{user.address.postalCode}}</li>
+
+  </ul>
+  <div class="card-body">
+    <a href="https://google.com" class="card-link">google.com</a>
+    <a href="https://wsei.edu.pl/" class="card-link">My alma mater</a>
+  </div>
+</div>

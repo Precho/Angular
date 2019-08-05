@@ -1,0 +1,20 @@
+<div class="invoice">
+  <div class="row data-section">
+    <div class="col">
+      <app-invoice-client></app-invoice-client>
+    </div>
+    <div class="col">
+      <app-invoice-details></app-invoice-details>
+    </div>
+  </div>
+  <div class="row positions-section">
+    <div class="col">
+      <app-invoice-positions [positions]=invoice.items (itemsChanged)=updateItems($event)></app-invoice-positions>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-6">
+      <app-invoice-summary [summary]=invoiceSummary></app-invoice-summary>
+    </div>
+  </div>
+</div>
